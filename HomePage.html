@@ -12,6 +12,20 @@
         ul > li{
             color:darkolivegreen;
         }
+
+        button:hover{
+            background-color:orange;
+        }
+
+        a::before{
+            content: "This is a style using CSS";
+            font-weight:bold;
+        }
+
+        p::selection{
+            color:red;
+            background-color:yellow;
+        }
     </style>
 </head>
 <body>
@@ -23,6 +37,8 @@
         <li>Anything</li>
         <li>anything again</li>
     </ul>
+    <p>Select this paragraph and highlight it should look different than other. That was done using CSS</p>
+    <button>Hover over me please!!</button>
     
 </body>
 </html>
