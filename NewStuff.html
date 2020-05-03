@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>New stuff</title>
+    <style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   /*"It will make it mobile responsive"*/
+        @media print{
+            .screen-only{
+                display:none;           /*THIS WILL MAKE ANYTHING WITH THIS PROPERTY TO NOT GET PRINTED*/
+            }
+        }
+
+        @media (min-width: 500px){      /*anything that is 500px or bigger this will take place*/
+            h1::before{
+                content: "Welcome to my web Page!";
+            }
+
+            body{
+                background-color: red;
+            }
+        }
+
+        @media (max-width: 499px){            /*anything that is 499px or less this will take place*/
+            h1::before {
+                content: "Welcome";
+            }
+
+            body {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <p>This page will be printed because it doesn't have the @media CSS</p>
+    <p class="screen-only">This paragraph won't be displayed when this page is printed</p>
+</body>
+</html>
